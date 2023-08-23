@@ -1,3 +1,4 @@
+import timeit
 class Solution(object):
     def isPowerOfTwo(self, n):
        if (n==1):
@@ -5,3 +6,5 @@ class Solution(object):
        if(n%2!=0 or n<=0):
            return False
        return self.isPowerOfTwo(n/2)
+    
+timeit.timeit(Solution.isPowerOfTwo(1))
